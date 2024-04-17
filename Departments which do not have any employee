@@ -1,0 +1,10 @@
+We have two tables Employee and Department as mentioned below:
+Employee - [Emp_ID, Emp_Name, Emp_Dep, Emp_Salary]
+ 
+Department - [Dep_ID, Dep_Name]
+ 
+find out the list of departments which do not have any employee
+
+Code:
+select dept_name from department d where dept_name not in 
+(select distinct Emp_Dep from Employee ) 
